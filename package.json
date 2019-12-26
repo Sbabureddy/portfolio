@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal Portfolio project to showcase my work, online presence, education and porjects.",
+  "main": "index.js",
+  "repository": "git@github.com:Sbabureddy/portfolio_fend.git",
+  "author": "sbabureddy <sbabureddy01@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-social": "5.1.1",
+    "font-awesome": "4.7.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}
