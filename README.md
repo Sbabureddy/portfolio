@@ -101,7 +101,7 @@ SOFTWARE.
 
 ## Author Info
 
-- Twitter - [@EkLavyudu](https://twitter.com/EkLavyudu)
+- Twitter - [@Fend2AI](https://twitter.com/EkLavyudu)
 - LinkedIn - [Babureddy Sunkesula](https://www.linkedin.com/in/babureddys/)
 
 [Back To The Top](#read-me-template)

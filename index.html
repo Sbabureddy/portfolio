@@ -22,69 +22,58 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary "
+      class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top"
       role="navigation"
     >
-      <a class="navbar-brand" href="#"
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+          aria-controls="Navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-        <img
-          src="img/logo.svg"
-          alt="Babu Reddy"
-          width="30px"
-          height="30px"
-          class="d-inline-block align-top"
-      />
-      <!-- Image attribution link : <div>Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
-    </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-
-        controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto ">
-          <li class="nav-item active">
-            <a class="nav-link" href="#home"
-              ><i class="fa fa-home fa-lg" aria-hidden="true"></i> Home
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#AboutMe"
-              ><i class="fa fa-info fa-lg" aria-hidden="true"></i> About
-            </a>
-          </li>
-          <li class="nav-tem">
-            <a href="#" class="nav-link"
-              ><i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
-              Education</a
-            >
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#projects"
-              ><i class="fa fa-tasks fa-lg" aria-hidden="true"></i> Projects
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><i class="fa fa-rss fa-lg" aria-hidden="true"></i> Blog</a
-            >
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="#contact"
-              ><i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"
+          >
+          <img
+            src="img/logo.svg"
+            alt="Babu Reddy"
+            width="30px"
+            height="30px"
+            class="d-inline-block align-top"
+        />
+        <!-- Image attribution link : <div>Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+        </a>
+        <div class="collapse navbar-collapse " id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">
+                <i class="fa fa-home fa-lg" aria-hidden="true"></i> Home
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#About">
+                <i class="fa fa-info fa-lg" aria-hidden="true"></i> About
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#Projects">
+                <i class="fa fa-tasks fa-lg" aria-hidden="true"></i> Projects
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#Contact"
+                ><i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div> 
     </nav>
 
     <main class="container">
@@ -92,7 +81,7 @@
       <section id="home">
         <div class="row">
           <div
-            class="col-12  d-flex flex-column justify-content-center align-items-center home-parallax"
+            class="col-12  d-flex flex-column justify-content-center align-items-center vh-100"
           >
           <p> 
             <h4 class='text-center'>Hi, </h4>
@@ -105,10 +94,10 @@
       </section>
       <!-- About Me Section Starting -->
       <section
-        class="d-flex flex-column justify-content-center align-items-center mb-1 parallax"
-        id="AboutMe"
+        class="d-flex flex-column justify-content-center align-items-center mb-1 vh-100"
+        id="About"
       >
-
+        <p>I love Web Development, but I have slowly morphed into a data Scientist too.</p>
 
         <p class="mx-5">
           I look forward to working with you to help met all your Front End Web
@@ -116,9 +105,11 @@
         </p>
       </section>
       <!-- Education Section -->
-      <section id="Education ">
+      <section id="Education " class="vh-100">
         <h5>Education</h5>
-            <ul class="nav nav-tabs justify-content-around mb-1" id="tab-list" role="tablist" aria-orientation="horizontal">
+        <div class="card text-center mb-3">
+          <div class="card-header">
+            <ul class="nav nav-tabs  justify-content-around mb-1" id="tab-list" role="tablist" aria-orientation="horizontal">
               <li class="nav-item">
                 <a href="#Udacity" class="nav-link active"  data-toggle="pill" role="tab" aria-controls="Udacity" aria-selected='true'>Udacity</a>
               </li>
@@ -128,74 +119,78 @@
               <li class="nav-item">
                 <a href="#DataCamp" class="nav-link"  data-toggle="pill" role="tab"  aria-controls="DataCamp" aria-selected="false">DataCamp</a>
               </li>
-          </ul>
-          <div class="tab-content mb-3" id="pills-tabContent">
-            <div id="Udacity" class="tab-pane fade active" id="udacity-tab" role="tabpanel" aria-labelledby="Udacity">
-              <div class="row">
-                <div class="col-12 col-md-6 mb-3">
-                  <div class="card">
-                    <div class="card-header"><a href="#" class="card-link">Google India Challenge Scholarship 2018</a></div>
-                    <div class="card-body ml-3">
-                      <h5 class="card-title"><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"> Front End Web Developer</a> </h5>
-                      <p class="card-text">
-                        Front End Web Developer Nanodegree program is to equip learners with the unique skills they need to build and develop responsive websites and applications. The program includes 5 courses and 7 projects.
-                      </p>
-                      
-                      <small>Issue Date: <time datetime="2018-12-09">December 9, 2018</time></small>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="tab-content mb-3" id="pills-tabContent">
+              <div id="Udacity" class="tab-pane fade active" id="udacity-tab" role="tabpanel" aria-labelledby="Udacity">
+                <div class="row">
+                  <div class="col-12 col-md-6 mb-3">
+                    <div class="card">
+                      <div class="card-header"><a href="#" class="card-link">Google India Challenge Scholarship 2018</a></div>
+                      <div class="card-body ml-3">
+                        <h5 class="card-title"><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011"> Front End Web Developer</a> </h5>
+                        <p class="card-text">
+                          Front End Web Developer Nanodegree program is to equip learners with the unique skills they need to build and develop responsive websites and applications. The program includes 5 courses and 7 projects.
+                        </p>
+                        
+                        <small>Issue Date: <time datetime="2018-12-09">December 9, 2018</time></small>
+                      </div>
+                      <div class="card-footer text-center">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+                      </div>
                     </div>
-                    <div class="card-footer text-center">
-                      <a href="#" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="card">
+                      <div class="card-header"><a href="https://www.facebook.com/groups/DevCBengaluru/learning_content/">Facebook Developer Circle: Bengaluru</a></div>
+                      <div class="card-body ml-3">
+                        <h5 class="card-title"><a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" class="card-link"> Deep Learnig </a> </h5>
+                        <p class="card-text">
+                          Deep learning is driving advances in artificial intelligence that are changing our world. Enroll now to build and apply your own deep neural networks to challenges like image classification and generation, time-series prediction, and model deployment.                      </p>
+                        <small>Issue Date: <time datetime="2018-12-25">December 25, 2019</time></small>
+                      </div>
+                      <div class="card-footer text-center">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-md-6">
-                  <div class="card">
-                    <div class="card-header"><a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" class="card-link">Deep Learnig</a></div>
-                    <div class="card-body ml-3">
-                      <h5 class="card-title"><a href="https://www.facebook.com/groups/DevCBengaluru/learning_content/"> Facebook Developer Circle: Bengaluru</a> </h5>
-                      <p class="card-text">
-                        Deep learning is driving advances in artificial intelligence that are changing our world. Enroll now to build and apply your own deep neural networks to challenges like image classification and generation, time-series prediction, and model deployment.                      </p>
-                      <small>Issue Date: <time datetime="2018-12-25">December 25, 2019</time></small>
-                    </div>
-                    <div class="card-footer text-center">
-                      <a href="#" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-            <div id="Coursera" class="tab-pane fade" id="coursera-tab" role="tabpanel" aria-labelledby="Coursera"> 
-              <div class="card">
-              <div class="card-header"><a href="https://www.coursera.org/" class="card-link"> Coursera  </a></div>
-              <div class="card-body ml-3">
-                <h5 class="card-title"><a href="https://www.coursera.org/specializations/full-stack-react?skipBrowseRedirect=true&skipRecommendationsRedirect=true&tab=completed" class="card-link"> Full-Stack Web Development with React</a>  </h5>
-                <p class="card-text">
-                  Learn front-end and hybrid mobile development, with server-side support, for implementing a multi-platform solution.                </p>
-                <small>Issue Date: <time datetime="2018-07-21">July 21, 2019</time></small>
-              </div>
-              <div class="card-footer text-center">
-                <a href="https://www.coursera.org/account/accomplishments/specialization/NUHPPKMVU88N?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate&utm_term=long" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
-              </div>
-            </div></div>
-            <div id="DataCamp" class="tab-pane fade" id="datacamp-tab" role="tabpanel" aria-labelledby="DataCamp">
-              <div class="card">
-                <div class="card-header"><a href="https://www.datacamp.com/tracks/data-scientist-with-python?version=2 " class="card-link"> Visual Studio Dev Essentials</a></div>
+              <div id="Coursera" class="tab-pane fade" id="coursera-tab" role="tabpanel" aria-labelledby="Coursera"> 
+                <div class="card">
+                <div class="card-header"><a href="https://www.coursera.org/" class="card-link"> Coursera  </a></div>
                 <div class="card-body ml-3">
-                  <h5 class="card-title"><a href="https://visualstudio.microsoft.com/dev-essentials/" target="_blank" rel="noopener noreferrer" class="card-link"> Data Scientist with Python</a> </h5>
+                  <h5 class="card-title"><a href="https://www.coursera.org/specializations/full-stack-react?skipBrowseRedirect=true&skipRecommendationsRedirect=true&tab=completed" class="card-link"> Full-Stack Web Development with React</a>  </h5>
                   <p class="card-text">
-                    A Data Scientist combines statistical and machine learning techniques with Python programming to analyze and interpret complex data.                  </p>
-                  <small>Issue Date: <time datetime="2018-02-08">February 08, 2019</time></small>
+                    Learn front-end and hybrid mobile development, with server-side support, for implementing a multi-platform solution.                </p>
+                  <small>Issue Date: <time datetime="2018-07-21">July 21, 2019</time></small>
                 </div>
                 <div class="card-footer text-center">
-                  <a href="https://drive.google.com/file/d/1RagE3EpQEqPYBtw5gLUIDqzQsjiDEjz1/view" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+                  <a href="https://www.coursera.org/account/accomplishments/specialization/NUHPPKMVU88N?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate&utm_term=long" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+                </div>
+              </div></div>
+              <div id="DataCamp" class="tab-pane fade" id="datacamp-tab" role="tabpanel" aria-labelledby="DataCamp">
+                <div class="card">
+                  <div class="card-header"><a href="https://www.datacamp.com/tracks/data-scientist-with-python?version=2 " class="card-link"> Visual Studio Dev Essentials</a></div>
+                  <div class="card-body ml-3">
+                    <h5 class="card-title"><a href="https://visualstudio.microsoft.com/dev-essentials/" target="_blank" rel="noopener noreferrer" class="card-link"> Data Scientist with Python</a> </h5>
+                    <p class="card-text">
+                      A Data Scientist combines statistical and machine learning techniques with Python programming to analyze and interpret complex data.                  </p>
+                    <small>Issue Date: <time datetime="2018-02-08">February 08, 2019</time></small>
+                  </div>
+                  <div class="card-footer text-center">
+                    <a href="https://drive.google.com/file/d/1RagE3EpQEqPYBtw5gLUIDqzQsjiDEjz1/view" target="_blank" rel="noopener noreferrer">Verify Certificate</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        </div>
       </section>
       <!-- Projects Section  Strating -->
-      <section id="projects" class="mb-1">
+      <section id="Projects" class="mb-1">
         <div class="row ">
           <div
             class="col-sm-12 col-md-6 justify-content-center align-items-center"
@@ -250,7 +245,7 @@
         </div>
       </section>
       <!-- Contact Section Starting -->
-      <section id="contact" class="mb-1">
+      <section id="Contact" class="mb-1">
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <div id="map"></div>
@@ -356,10 +351,10 @@
           <div class="col-4 offset-1 col-sm-2">
             <h5>Links</h5>
             <ul class="list-unstyled">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#AboutMe">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Projects">Projects</a></li>
+              <li><a href="#Contact">Contact</a></li>
             </ul>
           </div>
           <div class="col-7 col-sm-5">

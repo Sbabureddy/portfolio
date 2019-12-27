@@ -3,3 +3,6 @@ _*.yml
 .git
 img/*.jpg
 *.txt
+css/main.css.map
+css/main.scss
+css/main.css
