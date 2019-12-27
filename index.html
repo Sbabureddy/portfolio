@@ -78,8 +78,7 @@
 
     <main class="container">
       <!-- Intro Contanier/first div -->
-      <section id="home">
-        <div class="row">
+      <section id="Home">
           <div
             class="col-12  d-flex flex-column justify-content-center align-items-center vh-100"
           >
@@ -90,23 +89,22 @@
             <!-- who loves to build websites based on Bootstrap, React.js , Redux, Node.js, Express.js and  MongoDB. -->
           </p>
           </div>
-        </div>
       </section>
       <!-- About Me Section Starting -->
       <section
         class="d-flex flex-column justify-content-center align-items-center mb-1 vh-100"
         id="About"
       >
-        <p>I love Web Development, but I have slowly morphed into a data Scientist too.</p>
+        <p class="mx-5 lead">I love Web Development, but I have slowly morphed into a Data Scientist too.</p>
 
-        <p class="mx-5">
+        <p class="mx-5 lead">
           I look forward to working with you to help met all your Front End Web
           Developer needs.
         </p>
       </section>
       <!-- Education Section -->
       <section id="Education " class="vh-100">
-        <h5>Education</h5>
+        <h5 class="lead">Education</h5>
         <div class="card text-center mb-3">
           <div class="card-header">
             <ul class="nav nav-tabs  justify-content-around mb-1" id="tab-list" role="tablist" aria-orientation="horizontal">
@@ -197,7 +195,7 @@
           >
             <div class="card">
               <div class="card-body">
-                <h3 class="card-title">NeighboorHood Map</h3>
+                <h3 class="card-title">conFusion</h3>
                 <p class="card-text">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Temporibus quisquam voluptates vel corporis quidem omnis
@@ -251,7 +249,7 @@
             <div id="map"></div>
           </div>
           <div class="col-sm-12 col-md-6 form-parallax">
-            <form action="">
+            <form action="" class="needs-validation" novalidate>
               <div class="form-group">
                 <label for="name">Name:</label>
                 <input
@@ -262,6 +260,9 @@
                   class="form-control"
                   required
                 />
+                <div class="invalid-feedback">
+                  Please Enter Your Name
+                </div>
               </div>
               <div class="form-group">
                 <label for="email">E-Mail:</label>
@@ -273,6 +274,9 @@
                   placeholder="Enter Your Email..."
                   required
                 />
+                <div class="invalid-feedback">
+                  Please Enter Valid Email Address
+                </div>
               </div>
               <div class="form-group">
                 <label for="message">Message:</label>
@@ -283,6 +287,9 @@
                   placeholder="Enter Your Message Here..."
                   required
                 ></textarea>
+                <div class="invalid-feedback">
+                  Plese Write Something About Me!.
+                </div>
               </div>
               <button type="submit" class="btn btn-primary">
                 <i class="fa fa-refresh" aria-hidden="true"></i> Submit
@@ -449,4 +456,25 @@
         }
       }
     </script>
+    <!-- form submission -->
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+      </script>
 </html>
