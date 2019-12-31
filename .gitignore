@@ -8,3 +8,5 @@ css/main.scss
 css/main.css
 yarn-error.log
 dist/*
+# Local Netlify folder
+.netlify
