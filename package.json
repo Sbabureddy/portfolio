@@ -3,6 +3,19 @@
   "version": "1.0.0",
   "description": "My personal Portfolio project to showcase my work, online presence, education and porjects.",
   "main": "index.js",
+  "scripts": {
+    "start": "yarn run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
+    "scss": "node-scss -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- yarn run scss",
+    "watch:all": "parallelshell \"yarn run watch:scss\" \"yarn run lite\"",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "build": "yarn run clean && yarn run imagemin && yarn run copyfonts && yarn run usemin"
+  },
   "repository": "git@github.com:Sbabureddy/portfolio_fend.git",
   "author": "sbabureddy <sbabureddy01@gmail.com>",
   "license": "MIT",
@@ -12,5 +25,16 @@
     "font-awesome": "4.7.0",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "cssmin": "^0.4.3",
+    "htmlmin": "^0.0.7",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.13.0",
+    "onchange": "^6.1.0",
+    "parallelshell": "3.0.1",
+    "rimraf": "^3.0.0",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.5.1"
   }
 }

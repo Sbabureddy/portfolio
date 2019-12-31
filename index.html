@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- build:css css/main.css -->
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -18,9 +19,11 @@
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- endbuild -->
     <title>Babu Reddu Sunkesula</title>
   </head>
   <body>
+    <header>
     <nav
       class="navbar navbar-expand-sm bg-primary navbar-dark fixed-top"
       role="navigation"
@@ -75,7 +78,7 @@
         </div>
       </div> 
     </nav>
-
+  </header>
     <main class="container">
       <!-- Intro Contanier/first div -->
       <section id="Home">
@@ -258,10 +261,12 @@
                   id="name"
                   placeholder="Enter Your Name..."
                   class="form-control"
+                  minlength="2"
+                  maxlength="20"
                   required
                 />
                 <div class="invalid-feedback">
-                  Please Enter Your Name
+                   With alphabets only
                 </div>
               </div>
               <div class="form-group">
@@ -285,6 +290,8 @@
                   id="message"
                   class="form-control"
                   placeholder="Enter Your Message Here..."
+                  minlength="2"
+                  maxlength="250"
                   required
                 ></textarea>
                 <div class="invalid-feedback">
@@ -409,6 +416,7 @@
         <div class="row justify-content-center">
           <div class="col-auto">
             <p>© Copyright 2019 Babu Reddy Sunkesula</p>
+            <p class="text-muted">Designed by Babu Reddy Sunkesula</p>
           </div>
         </div>
       </div>
@@ -416,65 +424,17 @@
     <!-- JavaScript for Bootstrap -->
     <!-- Google map api key = AIzaSyA1VxL62y91dODUNQHEEi4WI-BSBa1ri4I -->
     
-  </body>
-  <!-- jQery, Popper and Bootstrap.js files Respectively -->
-  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- Google Maps API -->
-  <script
-      src="#" 
-      async
-      defer
+    <!-- jQery, Popper and Bootstrap.js files Respectively -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Google Maps API -->
+    <script
+    src="js/scripts.js" 
+    async
+    defer
     ></script>
     <!-- Google Maps Script -->
     <!-- https://maps.googleapis.com/maps/api/js?key=&callback=initMap -->
-    <script>
-      function initMap() {
-        var myLatLng = { lat: 12.9716, lng: 77.5946 };
-        // map
-        var map = new google.maps.Map(document.getElementById("map"), {
-          center: myLatLng,
-          zoom: 12
-        });
-        // marker
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: "Banglore"
-        });
-        // map animation
-        marker.addListener("click", toggleBounce);
-      }
-
-      // map animation function
-      function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
-        } else {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
-      }
-    </script>
-    <!-- form submission -->
-    <script>
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-      </script>
+  </body>
 </html>

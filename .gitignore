@@ -6,3 +6,5 @@ img/*.jpg
 css/main.css.map
 css/main.scss
 css/main.css
+yarn-error.log
+dist/*
