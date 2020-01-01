@@ -19,6 +19,7 @@
       href="node_modules/bootstrap-social/bootstrap-social.css"
     />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <!-- endbuild -->
     <title>Babu Reddu Sunkesula</title>
   </head>
@@ -112,7 +113,7 @@
           <div class="card-header">
             <ul class="nav nav-tabs  justify-content-around mb-1" id="tab-list" role="tablist" aria-orientation="horizontal">
               <li class="nav-item">
-                <a href="#Udacity" class="nav-link active"  data-toggle="pill" role="tab" aria-controls="Udacity" aria-selected='true'>Udacity</a>
+                <a href="#Udacity" class="nav-link"  data-toggle="pill" role="tab" aria-controls="Udacity" aria-selected='true'>Udacity</a>
               </li>
               <li class="nav-item">
                 <a href="#Coursera" class="nav-link"  data-toggle="pill" role="tab" aria-controls="Coursera" aria-selected="false">Coursera</a>
@@ -124,7 +125,7 @@
           </div>
           <div class="card-body">
             <div class="tab-content mb-3" id="pills-tabContent">
-              <div id="Udacity" class="tab-pane fade active" id="udacity-tab" role="tabpanel" aria-labelledby="Udacity">
+              <div id="Udacity" class="tab-pane fade active show" id="udacity-tab" role="tabpanel" aria-labelledby="Udacity">
                 <div class="row">
                   <div class="col-12 col-md-6 mb-3">
                     <div class="card">
@@ -436,5 +437,12 @@
     ></script>
     <!-- Google Maps Script -->
     <!-- https://maps.googleapis.com/maps/api/js?key=&callback=initMap -->
+    <!-- Tab Script -->
+    <script>
+          $('#tab-list a').on('click', function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    </script>
   </body>
 </html>
