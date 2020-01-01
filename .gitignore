@@ -1,7 +1,7 @@
 node_modules
 _*.yml
 .git
-img/*.jpg
+img/
 *.txt
 css/main.css.map
 css/main.scss
