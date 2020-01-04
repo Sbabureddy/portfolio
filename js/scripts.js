@@ -1,20 +1,3 @@
-function initMap() {
-  var myLatLng = { lat: 12.9716, lng: 77.5946 };
-  // map
-  var map = new google.maps.Map(document.getElementById("map"), {
-    center: myLatLng,
-    zoom: 12
-  });
-  // marker
-  var marker = new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: "Banglore"
-  });
-  // map animation
-  marker.addListener("click", toggleBounce);
-}
-
 // map animation function
 function toggleBounce() {
   if (marker.getAnimation() !== null) {
@@ -62,3 +45,27 @@ let message = document.getElementById("message");
     false
   );
 })();
+
+// map box script start
+// mapboxgl.accessToken =
+//   "pk.eyJ1IjoibWFwLXVzZXItMDEiLCJhIjoiY2pubTB5YWQ4MWxyNzN2bzN1ZGtnYTFoOSJ9.HXAlS70ZOjbM5gReUfg0vQ";
+// var banglore = [77.5946, 12.9716];
+// var map = new mapboxgl.Map({
+//   container: "map",
+//   style: "mapbox://styles/mapbox/streets-v11",
+//   center: banglore,
+//   zoom: 8
+// });
+
+// // Pop to the marker
+// var popup = new mapboxgl.Popup({ offset: 25 }).setText("Banglore");
+// var el = document.createElement("div");
+// el.id = "marker";
+
+// // create the marker
+// new mapboxgl.Marker(el)
+//   .setLngLat(banglore)
+//   .setPopup(popup) // sets a popup on this marker
+//   .addTo(map);
+
+// map box script end

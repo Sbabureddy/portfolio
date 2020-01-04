@@ -12,3 +12,5 @@ dist/*
 .netlify
 *.toml
 netlify.toml
+
+map.html
