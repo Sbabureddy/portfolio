@@ -1,16 +1,10 @@
 node_modules
 _*.yml
 .git
-img/
 *.txt
 css/main.css.map
 css/main.scss
-
 yarn-error.log
 dist/*
-# Local Netlify folder
-.netlify
-*.toml
-netlify.toml
+  # Local Netlify folder .netlify *.toml netlify.toml
 
-map.html

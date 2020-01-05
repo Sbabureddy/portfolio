@@ -47,25 +47,25 @@ let message = document.getElementById("message");
 })();
 
 // map box script start
-// mapboxgl.accessToken =
-//   "pk.eyJ1IjoibWFwLXVzZXItMDEiLCJhIjoiY2pubTB5YWQ4MWxyNzN2bzN1ZGtnYTFoOSJ9.HXAlS70ZOjbM5gReUfg0vQ";
-// var banglore = [77.5946, 12.9716];
-// var map = new mapboxgl.Map({
-//   container: "map",
-//   style: "mapbox://styles/mapbox/streets-v11",
-//   center: banglore,
-//   zoom: 8
-// });
+mapboxgl.accessToken =
+  "pk.eyJ1IjoibWFwLXVzZXItMDEiLCJhIjoiY2pubTB5YWQ4MWxyNzN2bzN1ZGtnYTFoOSJ9.HXAlS70ZOjbM5gReUfg0vQ";
+var banglore = [77.5946, 12.9716];
+var map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/mapbox/streets-v11",
+  center: banglore,
+  zoom: 8
+});
 
-// // Pop to the marker
-// var popup = new mapboxgl.Popup({ offset: 25 }).setText("Banglore");
-// var el = document.createElement("div");
-// el.id = "marker";
+// Pop to the marker
+var popup = new mapboxgl.Popup({ offset: 25 }).setText("Banglore");
+var el = document.createElement("div");
+el.id = "marker";
 
-// // create the marker
-// new mapboxgl.Marker(el)
-//   .setLngLat(banglore)
-//   .setPopup(popup) // sets a popup on this marker
-//   .addTo(map);
+// create the marker
+new mapboxgl.Marker(el)
+  .setLngLat(banglore)
+  .setPopup(popup) // sets a popup on this marker
+  .addTo(map);
 
 // map box script end

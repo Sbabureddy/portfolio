@@ -6,11 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="Description" content="Sunkesula Babu Reddy is a Udacity Google India 2018 Front End Scholar and Udacity Facebook 2019 Scholar for Secure and Private AI Scholarships ">
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js" async=""></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
-      rel="stylesheet"
-      media="all"
-    />
     <!-- build:css css/main.css -->
     <!-- Bootstrap CSS -->
     <link
@@ -30,6 +25,11 @@
     />
     <link rel="stylesheet" href="css/main.css" media="all" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
+      rel="stylesheet"
+      media="all"
+    />
     <!-- endbuild -->
     <title>Babu Reddu Sunkesula</title>
   </head>
@@ -263,7 +263,7 @@
             <div id="map"></div>
           </div>
           <div class="col-sm-12 col-md-6 mt-5">
-            <form action="" class="needs-validation" novalidate>
+            <form name="feedback" class="needs-validation" novalidate data-netlify="true">
               <div class="form-group">
                 <label for="name">Name:</label>
                 <input
@@ -435,8 +435,10 @@
 
         <div class="row justify-content-center">
           <div class="col-auto">
-            <p>© Copyright 2019 Babu Reddy Sunkesula</p>
-            <p class="text-muted">Designed by Babu Reddy Sunkesula</p>
+            <section>
+              <p>© Copyright 2019</p>
+              <p class="text-muted">Designed by Babu Reddy Sunkesula</p>
+            </section>
           </div>
         </div>
       </div>
@@ -444,11 +446,13 @@
     <!-- JavaScript for Bootstrap -->
 
     <!-- Google map api key = AIzaSyA1VxL62y91dODUNQHEEi4WI-BSBa1ri4I -->
-    
+    <!-- build:js js/main.js -->
     <!-- jQery, Popper and Bootstrap.js files Respectively -->
-    <script src="node_modules/lazysizes/lazysizes.min.js" async=""></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/lazysizes/lazysizes.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
   </body>
 </html>
