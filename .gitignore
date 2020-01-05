@@ -8,3 +8,5 @@ yarn-error.log
 dist/*
   # Local Netlify folder .netlify *.toml netlify.toml
 
+.netilfy
+.vscode
