@@ -1,16 +1,7 @@
-// map animation function
-function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
-
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let message = document.getElementById("message");
+var name = document.getElementById("name");
+var email = document.getElementById("email");
+var message = document.getElementById("message");
 
 (function() {
   "use strict";
