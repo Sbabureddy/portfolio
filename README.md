@@ -28,6 +28,15 @@ This Project is about my online presence(portfolio).
 - JavaScript
 - Bootstrap
 
+#### Task Runners
+
+- Grunt
+
+#### Hosted On
+
+- Netlify
+- GitHub Pages
+
 [Back To The Top](#read-me-template)
 
 ---
@@ -75,7 +84,7 @@ This Project is about my online presence(portfolio).
 
 MIT License
 
-Copyright (c) [2017][james q quick]
+Copyright (c) [2018][babu reddy sunkesula]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
